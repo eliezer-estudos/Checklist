@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Recolhimento de Equipamento - TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Checklist Recolhimento de Equipamento - TI</h1>
+    </header>
+
+    <div class="section">
+        <h2>Termos de responsabilidade</h2>
+        <label><input type="checkbox" class="checklist-item"> Entrega do termo</label>
+        <label><input type="checkbox" class="checklist-item"> Digitalização do termo para o SharePoint</label>
+        <label><input type="checkbox" class="checklist-item"> Guardar o termo impresso e assinado</label>
+    </div>
+
+    <div class="section">
+        <h2>Equipamento</h2>
+        <label><input type="checkbox" class="checklist-item"> Recolhimento do equipamento</label>
+        <label><input type="checkbox" class="checklist-item"> Relatório fotográfico</label>
+        <label><input type="checkbox" class="checklist-item"> Desalocar equipamento do sistema ASENG</label>
+        <label><input type="checkbox" class="checklist-item"> Formatação do equipamento</label>
+    </div>
+
+    <div class="section">
+        <h2>Office 365</h2>
+        <label><input type="checkbox" class="checklist-item"> Backup do perfil do usuário para o OneDrive</label>
+        <label><input type="checkbox" class="checklist-item"> Desconectar sessões de todos os dispositivos</label>
+        <label><input type="checkbox" class="checklist-item"> Remover licenças do usuário</label>
+        <label><input type="checkbox" class="checklist-item"> Sair dos grupos</label>
+        <label><input type="checkbox" class="checklist-item"> Direcionar emails para coordenador responsável do
+            usuário</label>
+    </div>
+
+    <div class="section">
+        <h2>Active Directory</h2>
+        <label><input type="checkbox" class="checklist-item"> Redefinir senhas do usuário</label>
+        <label><input type="checkbox" class="checklist-item"> Remover grupos do AD</label>
+        <label><input type="checkbox" class="checklist-item"> Remover gestor na ABA organização</label>
+        <label><input type="checkbox" class="checklist-item"> Desabilitar usuário</label>
+        <label><input type="checkbox" class="checklist-item"> Mover usuário para OU desativados</label>
+    </div>
+
+    <div class="signature">
+        <label for="tecnico">Técnico responsável:</label>
+        <input type="text" id="tecnico" name="tecnico">
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data">
+    </div>
+
+    <div class="button-container">
+        <button onclick="saveChecklist()">Salvar Checklist</button>
+        <button onclick="loadChecklist()">Carregar Checklist</button>
+        <button onclick="resetChecklist()">Resetar Checklist</button>
+        <button onclick="exportToTxt()">Exportar como TXT</button>
+        <button onclick="exportToPdf()">Exportar como PDF</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Desenvolvedor - TI</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="checklist.js"></script>
+</body>
+</html>
